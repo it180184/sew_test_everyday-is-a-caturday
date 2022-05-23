@@ -23,6 +23,7 @@ export class CatsVotingComponent implements OnInit {
     this.cs.getRandom().subscribe({
       next: res => {
         this.cat = res[0];
+        console.log(this.cat.breeds);
       },
       error: err => this.snackBar.open(err.message, "close")
     });
@@ -30,7 +31,7 @@ export class CatsVotingComponent implements OnInit {
 
   vote(value: number): void {
     this.cs.vote(this.cat?.id ?? '', value).subscribe({
-      next: (res) => {
+      next: () => {
         setTimeout(() => this.newImage(), 200);
       },
       error: err => this.snackBar.open(err.message, "close")

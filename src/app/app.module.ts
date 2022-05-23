@@ -13,6 +13,7 @@ import {TokenInterceptor} from "./interceptors/token.interceptor";
 import {MatTableModule} from "@angular/material/table";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
     HttpClientModule,
     MatTableModule,
     MatSnackBarModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatIconModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

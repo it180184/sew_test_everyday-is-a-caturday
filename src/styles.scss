@@ -10,3 +10,10 @@ body {
 mat-card.main{
   margin-top: 3vh;
 }
+
+mat-card > mat-card-title.mat-card-title {
+  margin-bottom: 2vh;
+  padding: 1vh 1vw;
+  border-radius: 0.2rem;
+  background-color: #222222;
+}
