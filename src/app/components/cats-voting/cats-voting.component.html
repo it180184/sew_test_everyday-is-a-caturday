@@ -1,0 +1,41 @@
+<mat-card class="main">
+  <mat-card-title>Random Cat</mat-card-title>
+
+  <ng-container *ngIf="cat; else loading">
+    <img [src]="cat.url" alt="cat" class="cat-img">
+    <mat-card-content *ngIf="cat.breeds && cat.breeds.length; else noInf">
+      <div class="breed" *ngFor="let breed of cat.breeds">
+        <div class="name"> {{ breed.name }}:</div>
+        <div class="description"> {{ breed.description }} <a [href]="breed.wikipedia_url" target="_blank">See more</a>
+        </div>
+        <div class="details">
+          <div class="item">
+            Affection:
+            <mat-progress-bar mode="determinate" [value]="breed.affection_level * 20"></mat-progress-bar>
+          </div>
+          <div class="item">
+            Child friendly:
+            <mat-progress-bar mode="determinate" [value]="breed.child_friendly * 20"></mat-progress-bar>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+
+
+    <ng-template #noInf>
+      <mat-card-content>
+        No information about the breeds
+      </mat-card-content>
+    </ng-template>
+
+
+    <mat-card-footer>
+      <button mat-raised-button color="primary" (click)="vote(1)">Upvote</button>
+      <button mat-raised-button color="warn" (click)="vote(0)">Downvote</button>
+      <button mat-stroked-button color="accent" (click)="newImage()">Next</button>
+    </mat-card-footer>
+  </ng-container>
+  <ng-template #loading>
+    image is loading
+  </ng-template>
+</mat-card>

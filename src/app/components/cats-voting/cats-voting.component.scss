@@ -1,0 +1,43 @@
+.cat-img {
+  height: 50vh;
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+mat-card-content {
+  margin: 2vh auto 5vh;
+  width: 60%;
+}
+
+mat-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > * {
+    margin: 2vh 2vw
+  }
+}
+
+.breed {
+  & .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom: deeppink 1px solid;
+    margin-bottom: 1vh;
+  }
+
+  & .details {
+    margin-top: 1vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & > .item {
+      display: inline-block;
+      width: 40%;
+    }
+  }
+
+  margin-bottom: 2vh;
+}
