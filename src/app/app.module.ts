@@ -14,6 +14,7 @@ import {MatTableModule} from "@angular/material/table";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatIconModule} from "@angular/material/icon";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatIconModule} from "@angular/material/icon";
     MatTableModule,
     MatSnackBarModule,
     MatProgressBarModule,
-    MatIconModule
+    MatIconModule,
+    MatPaginatorModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
